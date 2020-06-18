@@ -11,7 +11,7 @@ module.exports = {
 function insert(hobbit) {
   return db('hobbits')
   .insert(hobbit, 'id')
-  .then(({ id }) => {
+  .then(([id]) => {
     return findById(id);
   });
 }
